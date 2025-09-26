@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>ROMEO flowers</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #eaffea; /* светло-зеленый фон */
+      color: #333;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+    header h1 {
+      font-size: 48px;
+      font-weight: bold;
+    }
+    header h2 {
+      font-size: 28px;
+      margin-top: -10px;
+      color: #777;
+    }
+    .addresses {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px;
+    }
+    .address {
+      background: white;
+      border-radius: 15px;
+      padding: 20px 40px;
+      font-size: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    nav {
+      margin-top: auto;
+      background: #333;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    /* Секции */
+    section {
+      display: none;
+      padding: 40px;
+      min-height: calc(100vh - 150px);
+    }
+    section.active { display: block; }
+
+    /* Букеты */
+    .bouquets {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+    }
+    .bouquet {
+      text-align: center;
+    }
+    .bouquet img {
+      width: 250px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    /* Отзывы */
+    .reviews {
+      display: flex;
+      gap: 40px;
+    }
+    .reviews-left {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .review {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .reviews-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    .reviews-right h2 {
+      font-size: 36px;
+      margin: 0;
+    }
+    .reviews-right p { font-size: 18px; color: #555; }
+
+    /* Акции */
+    .promo {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      justify-content: center;
+    }
+    .promo img {
+      width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    .promo-info h2 { font-size: 32px; margin: 0; }
+    .promo-info p { font-size: 20px; margin: 10px 0; }
+    .old-price {
+      text-decoration: line-through;
+      font-size: 22px;
+      color: #999;
+    }
+    .new-price {
+      font-size: 36px;
+      font-weight: bold;
+      color: darkgreen;
+    }
+    #countdown {
+      font-size: 28px;
+      color: red;
+      margin: 15px 0;
+    }
+
+    /* Форма заказа */
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      margin: auto;
+      gap: 15px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: darkgreen;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+    button:hover { background: green; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ROMEO</h1>
+  <h2>flowers</h2>
+</header>
+
+<div class="addresses">
+  <div class="address">Сарайшык, 4</div>
+  <div class="address">Майлина, 16/6</div>
+  <div class="address">Мангилик ел, 42</div>
+</div>
+
+<!-- Главная -->
+<section id="home" class="active">
+  <h2 style="text-align:center;">Добро пожаловать в ROMEO flowers!</h2>
+  <p style="text-align:center;">Выберите раздел ниже.</p>
+</section>
+
+<!-- Букеты -->
+<section id="bouquets">
+  <h2>Наши букеты</h2>
+  <div class="bouquets">
+    <div class="bouquet">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.jLvEF8_6VOmOASvTT49yCAHaNK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Bouquet1">
+      <p>"Розовый шик" — 25 000 ₸</p>
+    </div>
+    <div class="bouquet">
+      <img src="https://static.insales-cdn.com/r/DNdbw1KUIxE/rs:fit:1000:0:1/q:100/plain/images/products/1/915/947381139/Frosted_Gardenia.jpg@jpg" alt="Bouquet2">
+      <p>"Gardenia" — 38 000 ₸</p>
+    </div>
+    <div class="bouquet">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.VcJ-3VfkTXO1gmgIJhb_5AHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Bouquet3">
+      <p>"Белый шарм" — 50 000 ₸</p>
+    </div>
+  </div>
+</section>
+
+<!-- Отзывы -->
+<section id="reviews">
+  <h2>Отзывы</h2>
+  <div class="reviews">
+    <div class="reviews-left">
+      <div class="review">
+        <b>Айнагуль Сакипова</b><br>
+        Заказывала букет в коробке, очень понравился, всё как на фото! Доставили в указанный срок, всё супер!
+      </div>
+      <div class="review">
+        <b>Дихан Рамазанов</b><br>
+        Решил порадовать девушку, сработали быстрее ГБР. Спасибо большое, лучшие!
+      </div>
+      <div class="review">
+        <b>Saltanat JSA</b><br>
+        Всегда вежливые, сервис на высоте. Всегда относятся с доверием и уважением! Ребята, так держать!
+      </div>
+      <div class="review">
+        <b>Авторское Право</b><br>
+        Еда супер, морепродукты вкусные и приготовлены хорошо. Интерьер хороший, довольно уютно...
+      </div>
+    </div>
+    <div class="reviews-right">
+      <h2>5000+ отзывов в 2GIS</h2>
+      <p>Спасибо, что находите время оставлять свои отзывы, для нас это очень важно.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Акции -->
+<section id="promo">
+  <h2>Акции</h2>
+  <div class="promo">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.3ko8G9CfTj6T9VGrh8dNdQHaHZ?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Promo">
+    <div class="promo-info">
+      <h2>Пышные цветы</h2>
+      <p>Акционный евробукет</p>
+      <div id="countdown"></div>
+      <p>Цена по акции:</p>
+      <p class="old-price">120 000 ₸</p>
+      <p class="new-price">108 000 ₸</p>
+    </div>
+  </div>
+</section>
+
+<!-- Заказ -->
+<section id="order">
+  <h2 style="text-align:center;">Нажмите, чтобы заказать</h2>
+  <form>
+    <input type="text" placeholder="Ваше имя" required>
+    <input type="text" placeholder="Название букета" required>
+    <input type="number" placeholder="Сумма букета" required>
+    <button type="submit">Отправить</button>
+  </form>
+</section>
+
+<!-- Навигация -->
+<nav>
+  <a href="#home" onclick="showPage('home')">Главная</a>
+  <a href="#bouquets" onclick="showPage('bouquets')">Букеты</a>
+  <a href="#reviews" onclick="showPage('reviews')">Отзывы</a>
+  <a href="#promo" onclick="showPage('promo')">Акционные</a>
+  <a href="#order" onclick="showPage('order')">Расценки по времени</a>
+</nav>
+
+<script>
+  // переключение страниц
+  function showPage(id) {
+    document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
+
+  // обратный отсчет 2 дня
+  const countdownElement = document.getElementById("countdown");
+  const targetDate = new Date();
+  targetDate.setDate(targetDate.getDate() + 2);
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+    const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
+    const seconds = Math.floor((distance % (1000*60))/1000);
+
+    countdownElement.textContent = hours+"ч "+minutes+"м "+seconds+"с";
+    if (distance < 0) countdownElement.textContent = "Акция завершена!";
+  }
+  setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
