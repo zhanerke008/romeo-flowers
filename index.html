@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Romeo Flowers</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+      text-align: center;
+      padding: 80px 20px 60px;
+      color: white;
+    }
+    header h1 {
+      font-size: 64px;
+      margin-bottom: 40px;
+      font-family: "Brush Script MT", cursive;
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+    .branches {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .branch {
+      background: white;
+      padding: 20px 40px;
+      border-radius: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: 0.3s;
+    }
+    .branch:hover {
+      background: #ffe4e1;
+      transform: translateY(-5px);
+    }
+    nav {
+      background: #ff69b4;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      position: sticky;
+      bottom: 0;
+    }
+    nav a {
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .bouquets img {
+      width: 220px;
+      border-radius: 20px;
+      margin: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .bouquet {
+      display: inline-block;
+      margin: 20px;
+    }
+    .bouquet p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .reviews {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .review {
+      background: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      text-align: left;
+    }
+    .sale-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .sale-content img {
+      width: 350px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .sale-text h2 {
+      margin: 10px 0;
+      font-size: 32px;
+    }
+    .timer {
+      font-size: 28px;
+      margin: 15px 0;
+      color: #d6336c;
+      font-weight: bold;
+    }
+    .old-price {
+      font-size: 22px;
+      text-decoration: line-through;
+      color: #777;
+    }
+    .new-price {
+      font-size: 36px;
+      color: #d6336c;
+      font-weight: bold;
+    }
+    .pricing p {
+      font-size: 22px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header id="home">
+  <h1>ROMEO FLOWERS</h1>
+  <div class="branches">
+    <div class="branch">Сарайшык, 4</div>
+    <div class="branch">Майлина, 16/6</div>
+    <div class="branch">Мангилик ел, 42</div>
+  </div>
+</header>
+
+<nav>
+  <a href="#bouquets">Букеты</a>
+  <a href="#reviews">Отзывы</a>
+  <a href="#sale">Акционные</a>
+  <a href="#pricing">Расценки по времени</a>
+</nav>
+
+<section id="bouquets" class="bouquets">
+  <h2>Наши букеты</h2>
+  <div class="bouquet">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Букет 1">
+    <p>Букет №1 — 10,000 ₸</p>
+  </div>
+  <div class="bouquet">
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Букет 2">
+    <p>Букет №2 — 20,000 ₸</p>
+  </div>
+  <div class="bouquet">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Букет 3">
+    <p>Букет №3 — 30,000 ₸</p>
+  </div>
+  <div class="bouquet">
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Букет 4">
+    <p>Букет №4 — 40,000 ₸</p>
+  </div>
+  <div class="bouquet">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Букет 5">
+    <p>Букет №5 — 50,000 ₸</p>
+  </div>
+</section>
+
+<section id="reviews" class="reviews">
+  <h2>Отзывы</h2>
+  <div class="review">
+    <p><b>Айнагуль Сакипова:</b><br>
+    Заказывала букет в коробке, очень понравился, всё как на фото!
+    Доставили в указанный срок, всё супер! Обязательно буду заказывать ещё! И рекомендую всем, сразу отвечают, и у них очень большой выбор цветов!</p>
+  </div>
+  <div class="review">
+    <p><b>Дихан Рамазанов:</b><br>
+    Решил порадовать девушку, сработали быстрее ГБР. Спасибо большое, лучшие!</p>
+  </div>
+</section>
+
+<section id="sale" class="sale">
+  <h2>Акции</h2>
+  <div class="sale-content">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Пышные цветы">
+    <div class="sale-text">
+      <h2>Пышные цветы</h2>
+      <p>Акционный евробукет</p>
+      <div class="timer" id="countdown">00:00:00</div>
+      <p class="old-price">120,000 ₸</p>
+      <p class="new-price">108,000 ₸</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing">
+  <h2>Расценки по времени</h2>
+  <p>Доставка в течение 1 часа — 2000 ₸</p>
+  <p>Доставка в течение 3 часов — 1500 ₸</p>
+  <p>Доставка в течение дня — 1000 ₸</p>
+</section>
+
+<script>
+  // Таймер обратного отсчета (на 1 час)
+  function startCountdown(duration, display) {
+    let timer = duration, hours, minutes, seconds;
+    setInterval(function () {
+      hours = parseInt(timer / 3600, 10);
+      minutes = parseInt((timer % 3600) / 60, 10);
+      seconds = parseInt(timer % 60, 10);
+
+      hours = hours < 10 ? "0" + hours : hours;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = hours + ":" + minutes + ":" + seconds;
+
+      if (--timer < 0) {
+        timer = duration;
+      }
+    }, 1000);
+  }
+  window.onload = function () {
+    let oneHour = 60 * 60,
+        display = document.querySelector('#countdown');
+    startCountdown(oneHour, display);
+  };
+</script>
+
+</body>
+</html>
